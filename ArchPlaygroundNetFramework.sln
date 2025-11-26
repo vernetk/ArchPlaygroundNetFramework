@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.36617.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchPlaygroundNetFramework", "ArchPlaygroundNetFramework\ArchPlaygroundNetFramework.csproj", "{86E9CEA0-249D-4F69-AE5C-ACD351CDC0DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86E9CEA0-249D-4F69-AE5C-ACD351CDC0DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86E9CEA0-249D-4F69-AE5C-ACD351CDC0DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86E9CEA0-249D-4F69-AE5C-ACD351CDC0DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86E9CEA0-249D-4F69-AE5C-ACD351CDC0DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6F7741A-D44D-4EC3-9379-5DEF0E0F72EE}
+	EndGlobalSection
+EndGlobal
