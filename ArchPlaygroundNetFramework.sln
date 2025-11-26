@@ -5,13 +5,15 @@ VisualStudioVersion = 15.0.36617.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchPlaygroundNetFramework.WebApiRest", "ArchPlaygroundNetFramework.WebApiRest\ArchPlaygroundNetFramework.WebApiRest.csproj", "{DAB10307-D3F5-4D23-81D5-37CE8EEFC90F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchPlaygroundNetFramework.ConsoleTest", "ArchPlaygroundNetFramework.ConsoleTest\ArchPlaygroundNetFramework.ConsoleTest.csproj", "{A9769B81-30D7-4884-ABFC-39B55933F04A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{D73640C4-B720-456D-A20C-5AE206BD0C98}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{A0EC0EAB-E19A-4A41-BC20-0680550368E5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{F8288676-D276-4F9A-8CF8-C7E02E7C3912}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchPlaygroundNetFramework.Dal", "ArchPlaygroundNetFramework.Dal\ArchPlaygroundNetFramework.Dal.csproj", "{FEFEFAA9-7A90-4352-AC3C-0680E0AA1DF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchPlaygroundNetFramework.Bll", "ArchPlaygroundNetFramework.Bll\ArchPlaygroundNetFramework.Bll.csproj", "{2168A7ED-BCE6-4843-9A57-37E86A917C90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,17 +25,22 @@ Global
 		{DAB10307-D3F5-4D23-81D5-37CE8EEFC90F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAB10307-D3F5-4D23-81D5-37CE8EEFC90F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAB10307-D3F5-4D23-81D5-37CE8EEFC90F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A9769B81-30D7-4884-ABFC-39B55933F04A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9769B81-30D7-4884-ABFC-39B55933F04A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9769B81-30D7-4884-ABFC-39B55933F04A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9769B81-30D7-4884-ABFC-39B55933F04A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEFEFAA9-7A90-4352-AC3C-0680E0AA1DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEFEFAA9-7A90-4352-AC3C-0680E0AA1DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEFEFAA9-7A90-4352-AC3C-0680E0AA1DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEFEFAA9-7A90-4352-AC3C-0680E0AA1DF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2168A7ED-BCE6-4843-9A57-37E86A917C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2168A7ED-BCE6-4843-9A57-37E86A917C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2168A7ED-BCE6-4843-9A57-37E86A917C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2168A7ED-BCE6-4843-9A57-37E86A917C90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DAB10307-D3F5-4D23-81D5-37CE8EEFC90F} = {D73640C4-B720-456D-A20C-5AE206BD0C98}
-		{A9769B81-30D7-4884-ABFC-39B55933F04A} = {D73640C4-B720-456D-A20C-5AE206BD0C98}
+		{FEFEFAA9-7A90-4352-AC3C-0680E0AA1DF4} = {F8288676-D276-4F9A-8CF8-C7E02E7C3912}
+		{2168A7ED-BCE6-4843-9A57-37E86A917C90} = {A0EC0EAB-E19A-4A41-BC20-0680550368E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E6F7741A-D44D-4EC3-9379-5DEF0E0F72EE}
