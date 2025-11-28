@@ -38,10 +38,10 @@ namespace MyVehiculeApp.UI
             gridVehicules.DataSource = vehicules;
         }
 
-        public void ShowError(string message)
-        {
-            MessageBox.Show(message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
+        //public void ShowError(string message)
+        //{
+        //    MessageBox.Show(message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //}
 
         private void gridVehicules_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

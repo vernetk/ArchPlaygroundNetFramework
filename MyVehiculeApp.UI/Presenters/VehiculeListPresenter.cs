@@ -10,13 +10,18 @@ using System.Threading.Tasks;
 
 namespace MyVehiculeApp.UI.Presenters
 {
-    public class VehiculeListPresenter
+    public class VehiculeListPresenter : PresenterBase
     {
         private readonly IVehiculeListView _view;
         private readonly Func<IVehiculeService> _serviceFactory;
         private readonly INavigationService _nav;
 
-        public VehiculeListPresenter(IVehiculeListView view, Func<IVehiculeService> serviceFactory, INavigationService nav)
+        public VehiculeListPresenter(
+            IVehiculeListView view, 
+            Func<IVehiculeService> serviceFactory, 
+            INavigationService nav,
+            IDialogService dialog) 
+            : base(dialog)
         {
             _view = view;
             _serviceFactory = serviceFactory;
@@ -48,11 +53,11 @@ namespace MyVehiculeApp.UI.Presenters
             }
             catch (DomainException ex)
             {
-                _view.ShowError(ex.Message);
+                ShowError(ex.Message);
             }
             catch (Exception ex)
             {
-                _view.ShowError("Erreur inattendue : " + ex.Message);
+                ShowError("Erreur inattendue : " + ex.Message);
             }
         }
     }

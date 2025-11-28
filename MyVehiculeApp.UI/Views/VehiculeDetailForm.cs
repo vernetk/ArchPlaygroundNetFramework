@@ -30,7 +30,7 @@ namespace MyVehiculeApp.UI.Views
             SaveRequested?.Invoke(this, EventArgs.Empty);
         }
 
-        public void ShowMessage(string msg) => MessageBox.Show(msg);
-        public void ShowError(string msg) => MessageBox.Show(msg, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //public void ShowMessage(string msg) => MessageBox.Show(msg);
+        //public void ShowError(string msg) => MessageBox.Show(msg, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
     }
 }

@@ -21,6 +21,6 @@ namespace MyVehiculeApp.UI.Views
         void DisplayVehicules(IEnumerable<VehiculeListItemViewModel> vehicules);
 
         // Gestion erreurs
-        void ShowError(string message);
+        //void ShowError(string message);
     }
 }

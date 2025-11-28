@@ -16,7 +16,7 @@ namespace MyVehiculeApp.UI.Views
 
         event EventHandler SaveRequested;
 
-        void ShowMessage(string msg);
-        void ShowError(string msg);
+        //void ShowMessage(string msg);
+        //void ShowError(string msg);
     }
 }

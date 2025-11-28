@@ -66,15 +66,15 @@ namespace MyVehiculeApp.UI.Presenters
                 else
                     _service.Create(vehicule);
 
-                _view.ShowMessage("Enregistré !");
+                ShowInfo("Enregistré !");
             }
             catch (DomainException ex)
             {
-                _view.ShowError(ex.Message);
+                ShowError(ex.Message);
             }
             catch (Exception ex)
             {
-                _view.ShowError("Erreur inattendue : " + ex.Message);
+                ShowError("Erreur inattendue : " + ex.Message);
             }
         }
     }
