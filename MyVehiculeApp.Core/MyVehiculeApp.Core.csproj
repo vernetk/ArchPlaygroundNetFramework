@@ -48,6 +48,8 @@
     <Compile Include="Interfaces\IVehiculeService.cs" />
     <Compile Include="Models\Vehicule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\VehiculeDetailViewModel .cs" />
+    <Compile Include="ViewModels\VehiculeListViewModel.cs" />
     <Compile Include="ViewModels\VehiculeListItemViewModel.cs" />
   </ItemGroup>
   <ItemGroup />

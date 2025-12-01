@@ -68,6 +68,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums.cs" />
     <Compile Include="Presenters\PresenterBase.cs" />
     <Compile Include="Presenters\VehiculeDetailPresenter.cs" />
     <Compile Include="Presenters\VehiculeListPresenter.cs" />

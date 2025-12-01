@@ -31,11 +31,12 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblMarque = new System.Windows.Forms.Label();
             this.txtImmatriculation = new System.Windows.Forms.TextBox();
+            this.lblMarque = new System.Windows.Forms.Label();
             this.txtMarque = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.gridVehicules = new System.Windows.Forms.DataGridView();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridVehicules)).BeginInit();
@@ -64,11 +65,12 @@
             this.flowLayoutPanel1.Controls.Add(this.lblMarque);
             this.flowLayoutPanel1.Controls.Add(this.txtMarque);
             this.flowLayoutPanel1.Controls.Add(this.btnSearch);
+            this.flowLayoutPanel1.Controls.Add(this.btnCreate);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(510, 49);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(794, 49);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -80,6 +82,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "labelImmat";
             // 
+            // txtImmatriculation
+            // 
+            this.txtImmatriculation.Location = new System.Drawing.Point(76, 13);
+            this.txtImmatriculation.Name = "txtImmatriculation";
+            this.txtImmatriculation.Size = new System.Drawing.Size(100, 20);
+            this.txtImmatriculation.TabIndex = 2;
+            // 
             // lblMarque
             // 
             this.lblMarque.AutoSize = true;
@@ -88,13 +97,6 @@
             this.lblMarque.Size = new System.Drawing.Size(43, 13);
             this.lblMarque.TabIndex = 1;
             this.lblMarque.Text = "Marque";
-            // 
-            // txtImmatriculation
-            // 
-            this.txtImmatriculation.Location = new System.Drawing.Point(76, 13);
-            this.txtImmatriculation.Name = "txtImmatriculation";
-            this.txtImmatriculation.Size = new System.Drawing.Size(100, 20);
-            this.txtImmatriculation.TabIndex = 2;
             // 
             // txtMarque
             // 
@@ -125,7 +127,16 @@
             this.gridVehicules.Size = new System.Drawing.Size(794, 389);
             this.gridVehicules.TabIndex = 1;
             this.gridVehicules.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridVehicules_CellDoubleClick);
-
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.Location = new System.Drawing.Point(418, 13);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(75, 23);
+            this.btnCreate.TabIndex = 5;
+            this.btnCreate.Text = "Creer";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // VehiculeListForm
             // 
@@ -154,5 +165,6 @@
         private System.Windows.Forms.TextBox txtMarque;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridView gridVehicules;
+        private System.Windows.Forms.Button btnCreate;
     }
 }

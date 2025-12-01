@@ -21,7 +21,7 @@ namespace MyVehiculeApp.UI.Services
             _container = container;
         }
 
-        public void OpenVehiculeDetail(int id)
+        public void OpenVehiculeDetail(int id, Action afterClose = null)
         {
             // 1) Créer la View (une instance fraîche)
             var view = _container.Resolve<IVehiculeDetailView>();
@@ -32,7 +32,34 @@ namespace MyVehiculeApp.UI.Services
                 new ParameterOverride("id", id)
             );
 
-            // 3) Ouvrir la modale
+            var form = (Form)view;
+
+            if (afterClose != null)
+            {
+                form.FormClosed += (s, e) => afterClose();
+            }
+
+            ((Form)view).ShowDialog();
+        }
+
+        public void CreateVehicule(Action afterClose = null)
+        {
+            // 1) Créer la View (une instance fraîche)
+            var view = _container.Resolve<IVehiculeDetailView>();
+
+            // 2) Créer le Presenter en lui passant la View existante
+            var presenter = _container.Resolve<VehiculeDetailPresenter>(
+                new ParameterOverride("view", view),
+                new ParameterOverride("id", 0)
+            );
+
+            var form = (Form)view;
+
+            if (afterClose != null)
+            {
+                form.FormClosed += (s, e) => afterClose();
+            }
+
             ((Form)view).ShowDialog();
         }
     }

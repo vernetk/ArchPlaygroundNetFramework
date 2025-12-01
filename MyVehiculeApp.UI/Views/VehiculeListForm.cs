@@ -14,35 +14,43 @@ namespace MyVehiculeApp.UI
 {
     public partial class VehiculeListForm : Form, IVehiculeListView
     {
+        #region Events
+        public event EventHandler SearchRequested;
+        public event EventHandler<int> VehiculeSelected;
+        public event EventHandler CreateRequested;
+        #endregion Events
+
+        #region VM
+        public VehiculeListViewModel ViewModel { get; private set; }
+        #endregion VM
+
+        #region Ctrs
         public VehiculeListForm()
         {
             InitializeComponent();
+
+            InitViewModel();
         }
+        #endregion Ctrs
 
-        // Champs exposés au presenter
-        public string Immatriculation => txtImmatriculation.Text;
-        public string Marque => txtMarque.Text;
+        #region VM methods
+        public void InitViewModel()
+        {
+            ViewModel = new VehiculeListViewModel();
 
-        // Event exposé au Presenter
-        public event EventHandler SearchRequested;
-        public event EventHandler<int> VehiculeSelected;
+            txtImmatriculation.DataBindings.Add("Text", ViewModel, nameof(VehiculeListViewModel.SearchImmatriculation), true, DataSourceUpdateMode.OnPropertyChanged);
+            txtMarque.DataBindings.Add("Text", ViewModel, nameof(VehiculeListViewModel.SearchMarque), true, DataSourceUpdateMode.OnPropertyChanged);
 
+            gridVehicules.AutoGenerateColumns = true;
+            gridVehicules.DataSource = ViewModel.Items;
+        }
+        #endregion VM methods
+
+        #region Events view
         private void btnSearch_Click(object sender, EventArgs e)
         {
             SearchRequested?.Invoke(this, EventArgs.Empty);
         }
-
-        // Méthode appelée par le Presenter
-        public void DisplayVehicules(IEnumerable<VehiculeListItemViewModel> vehicules)
-        {
-            gridVehicules.DataSource = vehicules;
-        }
-
-        //public void ShowError(string message)
-        //{
-        //    MessageBox.Show(message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //}
-
         private void gridVehicules_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -51,5 +59,10 @@ namespace MyVehiculeApp.UI
                 VehiculeSelected?.Invoke(this, id);
             }
         }
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            CreateRequested?.Invoke(this, EventArgs.Empty);
+        }
+        #endregion Events view
     }
 }

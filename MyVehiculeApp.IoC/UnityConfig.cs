@@ -24,7 +24,6 @@ namespace MyVehiculeApp.IoC
             container.RegisterType<IVehiculeRepository, VehiculeRepository>();
 
             // BLL
-            container.RegisterFactory<IVehiculeService>(c => c.Resolve<IVehiculeService>());
             container.RegisterType<IVehiculeService, VehiculeService>();
 
             return container;

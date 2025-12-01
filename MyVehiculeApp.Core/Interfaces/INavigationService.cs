@@ -8,6 +8,7 @@ namespace MyVehiculeApp.Core.Interfaces
 {
     public interface INavigationService
     {
-        void OpenVehiculeDetail(int id);
+        void OpenVehiculeDetail(int id, Action afterClose = null);
+        void CreateVehicule(Action afterClose = null);
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace MyVehiculeApp.UI.Views
+﻿using System.Windows.Forms;
+
+namespace MyVehiculeApp.UI.Views
 {
     partial class VehiculeDetailForm
     {
@@ -28,6 +30,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.errorProvider = new System.Windows.Forms.ErrorProvider();
+            this.errorProvider.ContainerControl = this;
+
+            this.errorProvider.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+
             this.txtImmatriculation = new System.Windows.Forms.TextBox();
             this.txtMarque = new System.Windows.Forms.TextBox();
             this.txtModele = new System.Windows.Forms.TextBox();
@@ -97,5 +104,6 @@
         private System.Windows.Forms.TextBox txtModele;
         private System.Windows.Forms.DateTimePicker dtpDateEntree;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

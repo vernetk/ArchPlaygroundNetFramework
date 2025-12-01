@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyVehiculeApp.Core.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,15 +9,16 @@ namespace MyVehiculeApp.UI.Views
 {
     public interface IVehiculeDetailView
     {
-        int Id { get; set; }
-        string Immatriculation { get; set; }
-        string Marque { get; set; }
-        string Modele { get; set; }
-        DateTime DateEntreeParc { get; set; }
+        VehiculeDetailViewModel ViewModel { get; }
 
         event EventHandler SaveRequested;
-
+        void SetMode(FormMode mode);
+        void Close();
         //void ShowMessage(string msg);
         //void ShowError(string msg);
+
+        void SetError(string propertyName, string message);
+        void ClearErrors();
+        void SetSaveButtonEnabled(bool enabled);
     }
 }
