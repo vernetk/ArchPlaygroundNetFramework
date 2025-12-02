@@ -24,24 +24,10 @@ namespace CslaExemple.AppServer
         }
 
         public IConfiguration Configuration { get; }
-        private const string BlazorClientPolicy = "AllowAllOrigins";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options =>
-            {
-                options.AddPolicy(BlazorClientPolicy,
-                    builder =>
-                    {
-                        builder
-                  .AllowAnyOrigin()
-                  .AllowAnyHeader()
-                  .AllowAnyMethod();
-                    });
-            });
-            services.AddMvc((o) => o.EnableEndpointRouting = false);
-
             services.AddControllers();
 
             // If using Kestrel:
@@ -57,8 +43,6 @@ namespace CslaExemple.AppServer
             {
                 options.AllowSynchronousIO = true;
             });
-
-            services.AddHttpContextAccessor();
 
             services.AddDalEfCore(Configuration);
             services.AddCsla();

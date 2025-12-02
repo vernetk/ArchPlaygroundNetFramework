@@ -20,7 +20,10 @@ namespace CslaExemple.DalEfNetStandard
         public static void AddDalEfCore(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<CslaDbContext>(options =>
-        options.UseSqlServer(configuration.GetConnectionString("CslaExempleDBConnexion")), contextLifetime: ServiceLifetime.Transient);
+            {
+                options.UseSqlServer(configuration.GetConnectionString("CslaExempleDBConnexion"));
+            }
+            , contextLifetime: ServiceLifetime.Transient);
 
             services.AddTransient<IResourceDal, ResourceDal>();
         }

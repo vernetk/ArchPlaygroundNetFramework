@@ -33,12 +33,10 @@ namespace CslaExemple.UI.ConsoleTest
                 var resourceEdit = ResourceEdit.NewResourceEditAsync().GetAwaiter().GetResult();
                 resourceEdit.FirstName = "Kévin";
                 resourceEdit.LastName = "VERNET";
-
                 resourceEdit.WaitForAllRulesToComplete().GetAwaiter().GetResult();
-
                 if (!resourceEdit.IsSavable)
                 {
-                    Console.WriteLine($"Resource non sauvegardable");
+                    Console.WriteLine($"Resource non sauvegardable. {String.Join("//", resourceEdit.BrokenRulesCollection.Select(br => br.Description))}");
                     return;
                 }
 
