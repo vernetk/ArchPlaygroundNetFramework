@@ -17,8 +17,6 @@ namespace CslaExemple.BLLNetStandard
     public class ResourceEdit : CslaBaseTypes.BusinessBase<ResourceEdit>
     {
         public static readonly PropertyInfo<byte[]> TimeStampProperty = RegisterProperty<byte[]>(c => c.TimeStamp);
-        [Browsable(false)]
-        [EditorBrowsable(EditorBrowsableState.Never)]
         public byte[] TimeStamp
         {
             get { return GetProperty(TimeStampProperty); }
@@ -26,7 +24,6 @@ namespace CslaExemple.BLLNetStandard
         }
 
         public static readonly PropertyInfo<int> IdProperty = RegisterProperty<int>(c => c.Id);
-        [Display(Name = "Resource id")]
         public int Id
         {
             get { return GetProperty(IdProperty); }
@@ -35,7 +32,6 @@ namespace CslaExemple.BLLNetStandard
 
         public static readonly PropertyInfo<string> LastNameProperty =
           RegisterProperty<string>(c => c.LastName);
-        [Display(Name = "Last name")]
         [Required]
         [StringLength(50)]
         public string LastName
@@ -46,7 +42,6 @@ namespace CslaExemple.BLLNetStandard
 
         public static readonly PropertyInfo<string> FirstNameProperty =
           RegisterProperty<string>(c => c.FirstName);
-        [Display(Name = "First name")]
         [Required]
         [StringLength(50)]
         public string FirstName

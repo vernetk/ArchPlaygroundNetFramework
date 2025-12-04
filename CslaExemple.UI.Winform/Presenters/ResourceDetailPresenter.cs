@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CslaExemple.UI.Winform
 {
-    public class ResourceDetailPresenter : PresenterBase
+    public class ResourceDetailPresenter : PresenterBase, IDisposable
     {
         private readonly IResourceDetailView _view;
         private readonly int _id;
@@ -95,6 +95,14 @@ namespace CslaExemple.UI.Winform
             _view.ClearErrors();
             bool isValid = true;
 
+            if (!VM.ModelEdit.IsSavable && VM.ModelEdit.BrokenRulesCollection.Count > 0)
+            {
+                foreach (var rule in VM.ModelEdit.BrokenRulesCollection)
+                {
+                    _view.SetError(rule.Property, rule.Description);
+                }
+            }
+
             if (string.IsNullOrWhiteSpace(VM.ModelEdit.FirstName))
             {
                 _view.SetError(nameof(VM.ModelEdit.FirstName), "L'FirstName est obligatoire.");
@@ -108,6 +116,12 @@ namespace CslaExemple.UI.Winform
             }
             _view.SetSaveButtonEnabled(isValid);
             return isValid;
+        }
+
+        public void Dispose()
+        {
+            VM.PropertyChanged -= (s, e) => ValidateAndShowErrors();
+            VM.ModelEdit.PropertyChanged -= (s, e) => ValidateAndShowErrors();
         }
     }
 }
