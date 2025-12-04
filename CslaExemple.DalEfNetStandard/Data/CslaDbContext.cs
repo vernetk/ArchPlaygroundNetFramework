@@ -19,9 +19,9 @@ namespace CslaExemple.DalEfNetStandard
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Resource>()
-                .ToTable("Resources")
-                .HasKey(v => v.Id);
+            //modelBuilder.Entity<Resource>()
+            //    .ToTable("Resources")
+            //    .HasKey(v => v.Id);
 
             base.OnModelCreating(modelBuilder);
         }

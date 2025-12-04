@@ -44,6 +44,8 @@ namespace CslaExemple.AppServer
                 options.AllowSynchronousIO = true;
             });
 
+            services.AddHttpContextAccessor();
+
             services.AddDalEfCore(Configuration);
             services.AddCsla();
         }

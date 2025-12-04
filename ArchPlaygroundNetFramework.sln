@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36717.8 d17.14
+VisualStudioVersion = 17.14.36717.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchPlaygroundNetFramework.WebApiRest", "ArchPlaygroundNetFramework.WebApiRest\ArchPlaygroundNetFramework.WebApiRest.csproj", "{DAB10307-D3F5-4D23-81D5-37CE8EEFC90F}"
 EndProject
@@ -42,6 +42,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CslaExemple.DalNetStandard", "CslaExemple.DalNetStandard\CslaExemple.DalNetStandard.csproj", "{D6C35E0D-CFEF-49CC-8B06-9EC1706A86BF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CslaExemple.DalEfNetStandard", "CslaExemple.DalEfNetStandard\CslaExemple.DalEfNetStandard.csproj", "{E2EE0088-741F-43AD-AAF4-12209D9DF496}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CslaExemple.UI.Winform", "CslaExemple.UI.Winform\CslaExemple.UI.Winform.csproj", "{784DC438-2B05-4A82-8093-2C3B6B4177F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{E2EE0088-741F-43AD-AAF4-12209D9DF496}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2EE0088-741F-43AD-AAF4-12209D9DF496}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2EE0088-741F-43AD-AAF4-12209D9DF496}.Release|Any CPU.Build.0 = Release|Any CPU
+		{784DC438-2B05-4A82-8093-2C3B6B4177F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{784DC438-2B05-4A82-8093-2C3B6B4177F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{784DC438-2B05-4A82-8093-2C3B6B4177F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{784DC438-2B05-4A82-8093-2C3B6B4177F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -127,6 +133,7 @@ Global
 		{D1C4F8E3-4890-4CAA-A29F-0D40DA20A414} = {B0BF918C-2095-4988-BD9C-531271EE7E28}
 		{D6C35E0D-CFEF-49CC-8B06-9EC1706A86BF} = {B0BF918C-2095-4988-BD9C-531271EE7E28}
 		{E2EE0088-741F-43AD-AAF4-12209D9DF496} = {B0BF918C-2095-4988-BD9C-531271EE7E28}
+		{784DC438-2B05-4A82-8093-2C3B6B4177F8} = {B0BF918C-2095-4988-BD9C-531271EE7E28}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E6F7741A-D44D-4EC3-9379-5DEF0E0F72EE}
