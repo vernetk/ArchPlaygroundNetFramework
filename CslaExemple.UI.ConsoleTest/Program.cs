@@ -26,7 +26,7 @@ namespace CslaExemple.UI.ConsoleTest
                 Console.WriteLine($"resource count {list.Count}");
                 foreach (var item in list)
                 {
-                    Console.WriteLine($"Resource Name:{item.Name}");
+                    Console.WriteLine($"Resource FullName:{item.FullName}");
                 }
 
 

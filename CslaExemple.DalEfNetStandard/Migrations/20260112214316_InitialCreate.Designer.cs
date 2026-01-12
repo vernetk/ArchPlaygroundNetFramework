@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CslaExemple.DalEfNetStandard.Migrations
 {
     [DbContext(typeof(CslaDbContext))]
-    [Migration("20251202162422_InitialBaseline")]
-    partial class InitialBaseline
+    [Migration("20260112214316_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

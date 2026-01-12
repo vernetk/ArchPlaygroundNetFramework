@@ -30,6 +30,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyVehiculeApp.DAL.Console", "MyVehiculeApp.DAL.Console\MyVehiculeApp.DAL.Console.csproj", "{0F35DFAF-30BE-4E59-AE9E-1FE58EEFCB86}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CslaExemple", "CslaExemple", "{B0BF918C-2095-4988-BD9C-531271EE7E28}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CslaExemple.UI.ConsoleTest", "CslaExemple.UI.ConsoleTest\CslaExemple.UI.ConsoleTest.csproj", "{E9988FD6-CD3A-4204-A76D-AAF09FA7DA3F}"
 EndProject
